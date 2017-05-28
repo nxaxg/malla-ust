@@ -1,0 +1,142 @@
+.malla{
+    &__title{
+        color: $color_blacky;
+        font-weight: $weight_bold;
+        &--special{
+            &__link{
+                font-size: 18px;
+                color: $color_secondary_light;
+                font-weight: $weight_regular;
+                text-decoration: underline;
+                &:hover{
+                    color: $color_secondary_dark;
+                }
+            }
+        }
+    }
+    &-semestre{
+        &__title{
+            color: $color_blacky;
+            font-weight: $weight_bold;
+        }
+    }
+    &__container{
+        padding: 1em 0;
+    }
+    &__box{
+        margin-bottom: .25rem;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &--certificado{
+            padding: 0 1rem;
+            display: flex;
+            flex-flow: row;
+            align-items: baseline;
+        }
+    }
+    &__button{
+        width: 100%;
+        border: 0;
+        color: $color_white;
+        font-weight: $weight_bold;
+        position: relative;
+        font-family: $fontRoboto;
+        text-align: left;
+        padding: 1rem .5rem;
+        &::after{
+            content: "v";
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            color: white;
+        }
+        &--especificas{
+            background: $color_especificas;
+            &:hover,
+            &.malla__active{
+                background: $color_especificas__hover;
+            }
+        }
+        &--basica{
+            background: $color_basica;
+            &:hover,
+            &.malla__active{
+                background: $color_basica__hover;
+            }
+        }
+        &--general{
+            background: $color_general;
+            &:hover,
+            &.malla__active{
+                background: $color_general__hover;
+            }
+        }
+        &:focus{
+            outline: none;
+            border: none;
+        }
+    }
+    &__body{
+        text-align: left;
+        padding: 1rem .5rem;
+        font-weight: $weight_regular;
+        font-family: $fontRoboto;
+        color: white;
+        &--especificas{
+            background: $color_especificas;
+        }
+        &--basica{
+            background: $color_basica;
+        }
+        &--general{
+            background: $color_general;
+        }
+    }
+    &__certificado{
+        &__icon{
+            width: 2em;
+            height: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            border: 2px solid orange;
+            color: orange;
+            margin-right: 1em;
+        }
+        &__title{
+            color: dimgray;
+        }
+    }
+    &__simbologia{
+        padding: 1rem 0;
+        background: lightgrey;
+    }
+    &__tag{
+        display: flex;
+        align-items: flex-start;
+        flex-flow: row;
+        p{
+            margin: 0;
+            font-size: 14px;
+            color: dimgray;
+            font-style: italic;
+        }
+    }
+    &__square{
+        width: 1.5em;
+        height: 1.5em;
+        margin-right: .5em;
+        display: inline-block;
+        &--especificas{
+            background: $color_especificas;
+        }
+        &--basica{
+            background: $color_basica;
+        }
+        &--general{
+            background: $color_general;
+        }
+    }
+}
